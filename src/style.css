@@ -1,3 +1,12 @@
-h1, p {
+body {
+  background-color: pink;
+  transition: all 1s;
+}
+.ninja form {
+  background-color: #fff;
+  padding: 20px;
+}
+h1,
+p {
   font-family: Lato;
 }
