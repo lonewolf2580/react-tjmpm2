@@ -11,13 +11,20 @@ export default class App extends Component {
       { name: 'Crystal', age: 25, belt: 'red', id: 3 },
     ],
   };
+  addNinja = (ninja) => {
+    ninja.id = Math.random();
+    let ninjas = [...this.state.ninjas, ninja];
+    this.setState({
+      ninjas: ninjas,
+    });
+  };
   render() {
     return (
       <div>
         <h1>Hello StackBlitz!</h1>
         <p>Start editing to see some magic happen :)</p>
         <Ninjas ninjas={this.state.ninjas} />
-        <AddNinja />
+        <AddNinja addNinja={this.addNinja} />
       </div>
     );
   }
